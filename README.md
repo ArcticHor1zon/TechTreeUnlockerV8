@@ -2,7 +2,7 @@
 
 A Mindustry Java mod that instantly unlocks all tech-tree research for **Serpulo** and **Erekir**.
 
-> Updated from raffel080108's original v7 release to target **Mindustry v8 (build 147+)**.
+> Port of [raffel080108's Tech Tree Unlocker](https://github.com/raffel080108/UnlockTechTreeMod) updated to target **Mindustry v8 (build 158+)**.
 
 ---
 
@@ -18,33 +18,61 @@ A Mindustry Java mod that instantly unlocks all tech-tree research for **Serpulo
 
 ---
 
+## Requirements
+
+- Mindustry **build 158** or newer
+- Desktop or Android
+
+---
+
 ## Installation
 
-### Import from Mod Browser (recommended)
+### Import from URL (recommended)
+
 In Mindustry: **Mods → Import mod → Import from URL**, paste:
+
 ```
-https://github.com/YOUR_FORK/UnlockTechTreeMod/archive/refs/heads/main.zip
+https://github.com/ArcticHor1zon/TechTreeUnlockerV8/archive/refs/heads/master.zip
 ```
+
+### Manual
+
+Download the latest `.jar` from [Releases](https://github.com/ArcticHor1zon/TechTreeUnlockerV8/releases) and place it in your Mindustry `mods/` folder.
+
 ---
 
 ## Usage
 
-### Settings panel
 **Main menu → Settings → scroll to "Unlock Tech Tree".**
 
-You'll find:
-- A checkbox to **auto-unlock on every campaign load**.
-- Buttons to unlock or reset research per planet.
+- Checkbox to **auto-unlock on every campaign load**.
+- Buttons to unlock or reset research per planet or all at once.
 
 ---
 
+## Building from Source
+
+Requires **JDK 17** and a working internet connection (dependencies are pulled from GitHub releases).
+
+```bash
+# Desktop JAR
+./gradlew jar
+
+# Android JAR (requires ANDROID_HOME set)
+./gradlew jarAndroid
+
+# Combined Desktop + Android release JAR
+./gradlew deploy
+```
+
+Output is placed in `build/libs/`.
 
 ---
 
 ## Changelog
 
 ### v2.0
-- Updated `minGameVersion` to **147** (Mindustry v8).
+- Updated `minGameVersion` to **158** (Mindustry v8).
 - Switched to **JDK 17** / Java 17 target.
 - Added **per-planet unlock**: Serpulo-only or Erekir-only.
 - Added **lock / reset** with per-planet support and confirmation dialog.
@@ -54,10 +82,14 @@ You'll find:
 - GitHub Actions CI workflow.
 
 ### v1.0
-- Initial release for Mindustry v7 (build 140).
+- Initial release for Mindustry v7 (build 140), by raffel080108.
 
 ---
 
+## Credits
+
+Original mod by [raffel080108](https://github.com/raffel080108). v2.0 port by [ArcticHor1zon](https://github.com/ArcticHor1zon).
+
 ## License
 
-MIT — see [LICENSE.md](LICENSE.md).
+MIT — see [LICENSE](LICENSE).
